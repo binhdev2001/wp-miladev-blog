@@ -13,7 +13,7 @@ services:
       WORDPRESS_DB_PASSWORD: miladev@pc00541
       WORDPRESS_DB_NAME: miladev_db
     volumes:
-      - ./fe-miladev-blog:/var/www/html
+      - ./fe-miladev-blog/wp-content:/var/www/html/wp-content # Chỉ mount thư mục wp-content
 
   db:
     image: mysql:8.0
@@ -40,5 +40,4 @@ services:
       - db
 
 volumes:
-  wordpress:
   db_data:
